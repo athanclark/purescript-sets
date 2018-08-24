@@ -19,7 +19,7 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-maps": "^3.0.0",
+    "purescript-maps": "git@git.localcooking.com:private-tooling/purescript-maps.git#78a14ce7704db3f25e7494376787f619a33c9783",
     "purescript-tailrec": "^3.0.0"
   },
   "devDependencies": {

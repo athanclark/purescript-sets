@@ -44,11 +44,14 @@ import Data.Maybe (Maybe)
 import Data.Monoid (class Monoid)
 import Data.Ord (class Ord1)
 import Data.Unfoldable (class Unfoldable)
+import Data.Generic (class Generic)
 
 import Partial.Unsafe (unsafePartial)
 
 -- | `Set a` represents a set of values of type `a`
-data Set a = Set (M.Map a Unit)
+newtype Set a = Set (M.Map a Unit)
+
+derive instance genericSet :: Generic a => Generic (Set a)
 
 -- | Create a set from a foldable structure.
 fromFoldable :: forall f a. Foldable f => Ord a => f a -> Set a
